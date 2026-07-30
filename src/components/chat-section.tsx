@@ -102,7 +102,7 @@ export function ChatSection() {
                       className={
                         message.role === "user"
                           ? "group-[.is-user]:bg-brand group-[.is-user]:text-brand-foreground"
-                          : "text-slate-200"
+                          : "group-[.is-assistant]:text-white [&_*]:text-white"
                       }
                     >
                       <MessageResponse>{text}</MessageResponse>
