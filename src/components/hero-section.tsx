@@ -1,4 +1,6 @@
+import { Download } from "lucide-react";
 import { PROFILE } from "@/lib/profile";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export function HeroSection() {
   return (
