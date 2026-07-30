@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { ChatSection } from "@/components/chat-section";
+import { ContactSection } from "@/components/contact-section";
+import { ExperienceSection } from "@/components/experience-section";
+import { ExpertiseSection } from "@/components/expertise-section";
+import { HeroSection } from "@/components/hero-section";
+import { ImpactSection } from "@/components/impact-section";
+import { SiteNav } from "@/components/site-nav";
+
+const TITLE = "Subhrojeet Saha — Technology Risk & Compliance";
+const DESCRIPTION =
+  "Technology Risk & Compliance leader with 7+ years across JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Ask the AI assistant about his experience.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background font-sans text-foreground antialiased">
+      <SiteNav />
+      <main>
+        <HeroSection />
+        <ImpactSection />
+        <ExperienceSection />
+        <ExpertiseSection />
+        <ChatSection />
+        <ContactSection />
+      </main>
+      <footer className="border-t border-slate-100 px-6 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 font-mono text-xs text-slate-400 sm:flex-row">
+          <span>© {new Date().getFullYear()} Subhrojeet Saha</span>
+          <span>Bengaluru, India</span>
+        </div>
+      </footer>
     </div>
   );
 }
