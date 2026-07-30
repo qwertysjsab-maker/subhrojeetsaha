@@ -35,7 +35,6 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-        </div>
         <a
           href={resumeAsset.url}
           download="Subhrojeet_Saha_Resume.pdf"
