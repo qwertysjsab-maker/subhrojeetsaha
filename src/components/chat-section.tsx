@@ -30,6 +30,7 @@ const STARTERS = [
 export function ChatSection() {
   const [input, setInput] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const hasInteracted = useRef(false);
 
   const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({ api: "/api/chat" }),
@@ -38,12 +39,14 @@ export function ChatSection() {
   const busy = status === "submitted" || status === "streaming";
 
   useEffect(() => {
+    if (!hasInteracted.current) return;
     if (!busy) textareaRef.current?.focus();
   }, [busy]);
 
   const send = (text: string) => {
     const trimmed = text.trim();
     if (!trimmed || busy) return;
+    hasInteracted.current = true;
     void sendMessage({ text: trimmed });
     setInput("");
   };
@@ -138,6 +141,9 @@ export function ChatSection() {
               ref={textareaRef}
               value={input}
               onChange={(event) => setInput(event.target.value)}
+              onFocus={() => {
+                hasInteracted.current = true;
+              }}
               placeholder="Ask about his experience..."
               className="text-slate-100 placeholder:text-slate-500"
             />
@@ -153,3 +159,4 @@ export function ChatSection() {
     </section>
   );
 }
+
