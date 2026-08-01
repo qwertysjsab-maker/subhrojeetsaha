@@ -3,9 +3,10 @@ import { PROFILE } from "@/lib/profile";
 const LINKS = [
   { href: "#experience", label: "Experience" },
   { href: "#expertise", label: "Expertise" },
-  { href: "#ai-chat", label: "AI Assistant" },
+  { href: "#ai-chat", label: "Enquire" },
   { href: "#contact", label: "Contact" },
 ];
+
 
 export function SiteNav() {
   return (

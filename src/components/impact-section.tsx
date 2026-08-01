@@ -5,8 +5,9 @@ export function ImpactSection() {
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
-          Institutional Impact
+          Professional Profile
         </h2>
+
         <p className="mb-12 max-w-3xl text-lg leading-relaxed text-slate-600">
           {PROFILE.summary}
         </p>

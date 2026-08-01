@@ -5,8 +5,9 @@ export function ExperienceSection() {
     <section id="experience" className="px-6 py-24">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-16 text-center font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
-          Career Trajectory
+          Professional Experience
         </h2>
+
         <div className="space-y-16">
           {EXPERIENCE.map((role) => (
             <div
