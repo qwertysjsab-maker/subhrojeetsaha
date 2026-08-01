@@ -16,7 +16,7 @@ export function SiteNav() {
           href="#top"
           className="font-mono text-sm font-bold tracking-tighter text-primary sm:text-lg"
         >
-          S.SAHA / RISK_&_COMPLIANCE
+          SUBHROJEET SAHA · TECHNOLOGY RISK
         </a>
         <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest text-slate-500 md:flex">
           {LINKS.map((link) => (
