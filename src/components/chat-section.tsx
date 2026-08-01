@@ -21,11 +21,12 @@ import {
 import { Shimmer } from "@/components/ai-elements/shimmer";
 
 const STARTERS = [
-  "Why is he a strong fit for a Technology Risk lead role?",
-  "Walk me through his TPRM redesign at Diligent.",
-  "What is he doing at JPMorgan Chase today?",
-  "Which frameworks has he actually implemented?",
+  "How does his background map to a Head of Technology Risk mandate?",
+  "Outline the third-party risk redesign he led at Diligent.",
+  "What is his current remit at JPMorgan Chase?",
+  "Which regulatory frameworks has he implemented first-hand?",
 ];
+
 
 export function ChatSection() {
   const [input, setInput] = useState("");
@@ -58,15 +59,16 @@ export function ChatSection() {
     >
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
         <div>
-          <h2 className="mb-6 font-mono text-4xl font-bold italic tracking-tight text-brand">
-            Query the Expert_
+          <h2 className="mb-6 font-mono text-4xl font-bold tracking-tight text-brand">
+            Enquire directly
           </h2>
           <p className="mb-8 text-lg leading-relaxed text-slate-400">
-            Ask about Subhrojeet&apos;s methodology, the programs he has run,
-            the frameworks he has implemented, or whether his background maps to
-            the role you are hiring for. The assistant answers from his actual
-            record — nothing embellished.
+            This assistant responds to questions regarding Subhrojeet&apos;s
+            methodology, the programmes he has led, the frameworks he has
+            implemented and the suitability of his background for a given
+            mandate. Every response is drawn from his professional record.
           </p>
+
           <div className="flex flex-wrap gap-3">
             {STARTERS.map((prompt) => (
               <button
@@ -87,11 +89,12 @@ export function ChatSection() {
             <ConversationContent className="gap-5 px-0">
               {messages.length === 0 && (
                 <div className="max-w-[85%] rounded-xl rounded-bl-none bg-white/5 p-4 text-sm text-slate-300">
-                  Hello — I can walk you through Subhrojeet&apos;s work in
+                  Good day. I can provide detail on Subhrojeet&apos;s work in
                   technology risk, third-party risk, audit and security
-                  governance. What would you like to know?
+                  governance. How may I assist?
                 </div>
               )}
+
 
               {messages.map((message) => {
                 const text = message.parts
@@ -122,10 +125,11 @@ export function ChatSection() {
 
               {error && (
                 <p className="text-sm text-red-400">
-                  The assistant is unavailable right now. Please try again in a
-                  moment, or use the contact form below.
+                  The assistant is temporarily unavailable. Please try again
+                  shortly, or use the contact form below.
                 </p>
               )}
+
             </ConversationContent>
             <ConversationScrollButton />
           </Conversation>
@@ -144,7 +148,7 @@ export function ChatSection() {
               onFocus={() => {
                 hasInteracted.current = true;
               }}
-              placeholder="Ask about his experience..."
+              placeholder="Submit an enquiry about his experience..."
               className="text-slate-100 placeholder:text-slate-500"
             />
             <PromptInputFooter className="justify-end border-white/10">

@@ -4,21 +4,23 @@ export const PROFILE = {
   location: "Bengaluru, Karnataka, India",
   linkedin: "https://www.linkedin.com/in/subhrojeetsaha/",
   summary:
-    "Technology Risk & Compliance professional with 7+ years across Goldman Sachs, JPMorgan Chase, Moody's, Diligent and KPMG. Expertise spans Compliance, Risk Management, Third-Party Risk Management (TPRM), Information Security Governance, Technology Risk, Internal Audit, Control Assurance and Regulatory Compliance.",
+    "I am a technology risk and compliance practitioner with more than seven years of experience gained at Goldman Sachs, JPMorgan Chase, Moody's, Diligent and KPMG. My work spans regulatory compliance, enterprise and technology risk management, third-party risk, information security governance, internal audit and control assurance — consistently delivered in highly regulated, globally distributed environments.",
+  tagline:
+    "I design and lead governance, risk and compliance programmes that hold up to regulatory, audit and board-level scrutiny.",
 };
 
 export const IMPACT = [
   {
     metric: "250+",
-    body: "Annual risk-based vendor assessments delivered without SLA breaches, alongside 50+ critical supplier reviews for a global SaaS organisation.",
+    body: "Risk-based vendor assessments governed each year without a single service-level breach, complemented by more than fifty critical supplier reviews for a global SaaS enterprise.",
   },
   {
     metric: "~30%",
-    body: "Efficiency gain from redesigning the TPRM framework and operating model, aligned to SOC 2 and BSI C5 requirements.",
+    body: "Improvement in operating efficiency achieved by redesigning the third-party risk management framework and operating model in alignment with SOC 2 and BSI C5 requirements.",
   },
   {
     metric: "Priority 0",
-    body: "Frontier AI vulnerability management program at a major financial institution, plus a new Second Line Controls Surveillance capability that reduced audit findings.",
+    body: "Programme accountability for frontier-AI vulnerability management at a global financial institution, together with the establishment of a second-line controls surveillance capability that measurably reduced audit findings.",
   },
 ];
 
@@ -29,11 +31,11 @@ export const EXPERIENCE = [
     period: "Mar 2026 — Present",
     current: true,
     bullets: [
-      "Part of Project Glasswing (Anthropic x JPMC): technical program management for identification, triage and resolution of vulnerabilities surfaced by Mythos and other frontier AI models across a major line of business.",
-      "Partner with Business, Engineering, Cybersecurity and Technology Risk teams as a Security GRC subject matter expert.",
-      "Automated metric calculation and business intelligence to present live KPIs, such as vulnerability burndown since inception, to C-suite management.",
-      "Streamlined application onboarding by aligning workflows with technology and security control requirements across the SDLC.",
-      "Monitor security reliability metrics and risk indicators, reporting control health and remediation progress to stakeholders.",
+      "Provide technical programme management for Project Glasswing (Anthropic and JPMorgan Chase), overseeing the identification, triage and resolution of vulnerabilities surfaced by Mythos and other frontier AI models across a major line of business.",
+      "Serve as the security governance, risk and compliance subject matter expert to business, engineering, cybersecurity and technology risk stakeholders.",
+      "Automated metric computation and business intelligence reporting to present live key performance indicators, including vulnerability burndown since inception, to C-suite leadership.",
+      "Streamlined application onboarding by aligning delivery workflows with technology and security control requirements across the software development lifecycle.",
+      "Monitor security reliability metrics and risk indicators, reporting control health and remediation progress to executive stakeholders.",
     ],
   },
   {
@@ -41,11 +43,11 @@ export const EXPERIENCE = [
     role: "Staff GRC Analyst",
     period: "May 2024 — Mar 2026",
     bullets: [
-      "Led Security Risk and Third-Party Risk Management for a global SaaS organisation, managing a team of five risk professionals.",
-      "Established a Second Line Controls Surveillance capability to proactively identify control deficiencies.",
-      "Redesigned TPRM policies, standards and controls to align with SOC 2 and BSI C5, improving operational efficiency by ~30%.",
-      "Oversaw 250+ annual risk-based vendor assessments and 50+ critical supplier reviews, keeping systems audit and IPO ready.",
-      "Delivered executive risk reporting, compliance communications and security awareness initiatives.",
+      "Led the security risk and third-party risk management functions for a global SaaS enterprise, directing a team of five risk professionals.",
+      "Established a second-line controls surveillance capability to identify control deficiencies proactively and strengthen assurance coverage.",
+      "Redesigned third-party risk policies, standards and controls in alignment with SOC 2 and BSI C5, improving operating efficiency by approximately thirty per cent.",
+      "Governed more than 250 risk-based vendor assessments annually and over fifty critical supplier reviews, maintaining audit and IPO readiness throughout.",
+      "Delivered executive risk reporting, compliance communications and enterprise security awareness programmes.",
     ],
   },
   {
@@ -53,10 +55,10 @@ export const EXPERIENCE = [
     role: "Senior IT Auditor",
     period: "Jun 2022 — May 2024",
     bullets: [
-      "Executed risk-based technology and integrated audits covering risk assessment, control testing, reporting and remediation validation.",
-      "Conducted continuous risk monitoring to identify emerging operational, compliance and information security risks.",
-      "Advised senior stakeholders on control deficiencies, remediation priorities and risk treatment plans.",
-      "Maintained risk registers and coordinated remediation across multiple business functions.",
+      "Executed risk-based technology and integrated audits encompassing risk assessment, control testing, reporting and remediation validation.",
+      "Conducted continuous risk monitoring to identify emerging operational, compliance and information security exposures.",
+      "Advised senior stakeholders on control deficiencies, remediation priorities and risk treatment strategies.",
+      "Maintained enterprise risk registers and coordinated remediation across multiple business functions.",
     ],
   },
   {
@@ -65,9 +67,9 @@ export const EXPERIENCE = [
     period: "Jul 2021 — Apr 2022",
     bullets: [
       "Assessed technology controls and risk management practices supporting Global Markets Engineering and Operations.",
-      "Evaluated control effectiveness across critical applications, infrastructure and business processes.",
+      "Evaluated control effectiveness across business-critical applications, infrastructure and processes.",
       "Performed application and source code reviews across Python, Java, SQL and C++ environments.",
-      "Validated remediation actions and monitored closure of technology risk findings.",
+      "Validated remediation activity and monitored the closure of technology risk findings.",
     ],
   },
   {
@@ -75,9 +77,9 @@ export const EXPERIENCE = [
     role: "Analyst",
     period: "Jan 2019 — Jun 2021",
     bullets: [
-      "Delivered SOC 1, SOC 2, ISAE 3402 and ISAE 3000 assurance engagements across technology, telecommunications and media.",
+      "Delivered SOC 1, SOC 2, ISAE 3402 and ISAE 3000 assurance engagements across the technology, telecommunications and media sectors.",
       "Performed risk assessments, compliance reviews and control testing of technology and information security controls.",
-      "Developed Risk Control Matrices aligned to regulatory and industry frameworks.",
+      "Developed risk control matrices aligned to prevailing regulatory and industry frameworks.",
     ],
   },
 ];
@@ -108,19 +110,18 @@ export const TOOLS = [
 ];
 
 export const COMPETENCIES = [
-  "Program Management",
-  "Compliance",
-  "Risk Management",
+  "Programme Management",
+  "Regulatory Compliance",
+  "Enterprise Risk Management",
   "Technology Risk",
   "Third-Party Risk Management",
   "Information Security Governance",
-  "Regulatory Compliance",
-  "Internal & External Audits",
+  "Internal & External Audit",
   "Operational Risk",
   "Control Assurance",
   "Policy & Standards Governance",
-  "Risk Assessments",
-  "Stakeholder Management",
+  "Risk Assessment",
+  "Executive Stakeholder Management",
   "Security Awareness",
 ];
 

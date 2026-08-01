@@ -8,9 +8,10 @@ import { HeroSection } from "@/components/hero-section";
 import { ImpactSection } from "@/components/impact-section";
 import { SiteNav } from "@/components/site-nav";
 
-const TITLE = "Subhrojeet Saha — Technology Risk & Compliance";
+const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =
-  "Technology Risk & Compliance leader with 7+ years across JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Ask the AI assistant about his experience.";
+  "Technology risk and compliance leader with seven years at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Review my record or submit an enquiry.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({

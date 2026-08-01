@@ -3,9 +3,10 @@ import { PROFILE } from "@/lib/profile";
 const LINKS = [
   { href: "#experience", label: "Experience" },
   { href: "#expertise", label: "Expertise" },
-  { href: "#ai-chat", label: "AI Assistant" },
+  { href: "#ai-chat", label: "Enquire" },
   { href: "#contact", label: "Contact" },
 ];
+
 
 export function SiteNav() {
   return (
@@ -15,7 +16,7 @@ export function SiteNav() {
           href="#top"
           className="font-mono text-sm font-bold tracking-tighter text-primary sm:text-lg"
         >
-          S.SAHA / RISK_&_COMPLIANCE
+          SUBHROJEET SAHA · TECHNOLOGY RISK
         </a>
         <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest text-slate-500 md:flex">
           {LINKS.map((link) => (
