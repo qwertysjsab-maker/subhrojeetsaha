@@ -24,11 +24,12 @@ export function ContactSection() {
     setSending(false);
 
     if (error) {
-      toast.error("Message could not be sent. Please try again.");
+      toast.error("Your message could not be sent. Please try again.");
       return;
     }
 
-    toast.success("Message sent — Subhrojeet will be in touch.");
+    toast.success("Thank you — your message has been received.");
+
     setName("");
     setEmail("");
     setMessage("");
@@ -38,12 +39,14 @@ export function ContactSection() {
     <section id="contact" className="border-t border-slate-100 px-6 py-24">
       <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2">
         <div>
-          <h2 className="mb-6 text-4xl font-bold">Let&apos;s talk.</h2>
+          <h2 className="mb-6 text-4xl font-bold">Get in touch.</h2>
           <p className="mb-8 max-w-md leading-relaxed text-slate-600">
-            Open to senior roles and advisory work in technology risk,
-            compliance, third-party risk and security governance. Send a note
-            and it lands directly with him.
+            I welcome enquiries regarding senior appointments and advisory
+            engagements in technology risk, compliance, third-party risk and
+            security governance. Correspondence submitted below reaches me
+            directly and is treated in confidence.
           </p>
+
           <a
             href={PROFILE.linkedin}
             target="_blank"

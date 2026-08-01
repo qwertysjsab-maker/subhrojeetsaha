@@ -125,10 +125,11 @@ export function ChatSection() {
 
               {error && (
                 <p className="text-sm text-red-400">
-                  The assistant is unavailable right now. Please try again in a
-                  moment, or use the contact form below.
+                  The assistant is temporarily unavailable. Please try again
+                  shortly, or use the contact form below.
                 </p>
               )}
+
             </ConversationContent>
             <ConversationScrollButton />
           </Conversation>
@@ -147,7 +148,7 @@ export function ChatSection() {
               onFocus={() => {
                 hasInteracted.current = true;
               }}
-              placeholder="Ask about his experience..."
+              placeholder="Submit an enquiry about his experience..."
               className="text-slate-100 placeholder:text-slate-500"
             />
             <PromptInputFooter className="justify-end border-white/10">
