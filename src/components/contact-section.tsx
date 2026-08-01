@@ -53,7 +53,7 @@ export function ContactSection() {
             rel="noreferrer"
             className="inline-flex items-center gap-2 font-mono text-sm text-slate-500 underline decoration-brand underline-offset-4 transition-colors hover:text-brand"
           >
-            Connect on LinkedIn →
+            View LinkedIn profile →
           </a>
         </div>
 
@@ -113,7 +113,7 @@ export function ContactSection() {
             disabled={sending}
             className="w-full rounded-lg bg-primary px-6 py-3.5 font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
           >
-            {sending ? "Sending..." : "Send message"}
+            {sending ? "Submitting..." : "Submit enquiry"}
           </button>
         </form>
       </div>
