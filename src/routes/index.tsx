@@ -7,6 +7,8 @@ import { ExpertiseSection } from "@/components/expertise-section";
 import { HeroSection } from "@/components/hero-section";
 import { ImpactSection } from "@/components/impact-section";
 import { SiteNav } from "@/components/site-nav";
+import { VisitorCount } from "@/components/visitor-count";
+
 
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =

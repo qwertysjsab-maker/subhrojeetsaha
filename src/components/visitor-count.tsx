@@ -16,14 +16,11 @@ export function VisitorCount() {
         window.sessionStorage.getItem(SESSION_KEY) === "1";
 
       if (alreadyCounted) {
-        const { data } = await supabase
-          .from("site_visits")
-          .select("count")
-          .eq("id", "landing")
-          .maybeSingle();
-        if (!cancelled && data) setCount(Number(data.count));
+        const { data } = await supabase.rpc("get_site_visit_count");
+        if (!cancelled && typeof data === "number") setCount(data);
         return;
       }
+
 
       const { data, error } = await supabase.rpc("register_site_visit");
       if (error) return;
