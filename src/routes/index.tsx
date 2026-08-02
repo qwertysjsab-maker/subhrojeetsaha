@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { ClientOnly, createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 
-import { ChatSection } from "@/components/chat-section";
 import { ContactSection } from "@/components/contact-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { ExpertiseSection } from "@/components/expertise-section";
@@ -8,6 +8,12 @@ import { HeroSection } from "@/components/hero-section";
 import { ImpactSection } from "@/components/impact-section";
 import { SiteNav } from "@/components/site-nav";
 import { VisitorCount } from "@/components/visitor-count";
+
+// Loaded only in the browser, in its own async chunk, to keep the AI SDK's
+// zod dependency out of the route's initial module graph.
+const ChatSection = lazy(() =>
+  import("@/components/chat-section").then((m) => ({ default: m.ChatSection })),
+);
 
 
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
@@ -36,7 +42,11 @@ function Index() {
         <ImpactSection />
         <ExperienceSection />
         <ExpertiseSection />
-        <ChatSection />
+        <ClientOnly fallback={<div className="min-h-[520px]" />}>
+          <Suspense fallback={<div className="min-h-[520px]" />}>
+            <ChatSection />
+          </Suspense>
+        </ClientOnly>
         <ContactSection />
       </main>
       <footer className="border-t border-slate-100 px-6 py-10">
