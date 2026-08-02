@@ -7,6 +7,8 @@ import { ExpertiseSection } from "@/components/expertise-section";
 import { HeroSection } from "@/components/hero-section";
 import { ImpactSection } from "@/components/impact-section";
 import { SiteNav } from "@/components/site-nav";
+import { VisitorCount } from "@/components/visitor-count";
+
 
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =
@@ -38,11 +40,18 @@ function Index() {
         <ContactSection />
       </main>
       <footer className="border-t border-slate-100 px-6 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 font-mono text-xs text-slate-400 sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 font-mono text-xs text-slate-400 sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Subhrojeet Saha</span>
-          <span>Bengaluru, India</span>
+          <span className="flex items-center gap-3">
+            <span>Bengaluru, India</span>
+            <span aria-hidden className="hidden text-slate-200 sm:inline">
+              ·
+            </span>
+            <VisitorCount />
+          </span>
         </div>
       </footer>
+
     </div>
   );
 }

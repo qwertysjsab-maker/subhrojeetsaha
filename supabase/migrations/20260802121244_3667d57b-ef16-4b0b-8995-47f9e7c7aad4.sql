@@ -1,0 +1,1 @@
+UPDATE public.site_visits SET count = 0 WHERE id = 'landing';
