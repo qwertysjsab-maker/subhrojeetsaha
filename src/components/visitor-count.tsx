@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { supabase } from "@/integrations/supabase/client";
+import {
+  getSiteVisitCount,
+  registerSiteVisit,
+} from "@/lib/visits.functions";
 
 const SESSION_KEY = "sjs-visit-counted";
 
@@ -14,17 +17,15 @@ export function VisitorCount() {
       const alreadyCounted =
         window.sessionStorage.getItem(SESSION_KEY) === "1";
 
-      const { data, error } = alreadyCounted
-        ? await supabase.rpc("get_site_visit_count")
-        : await supabase.rpc("register_site_visit");
-
-      if (error) {
-        console.error("visitor count", error);
-        return;
+      try {
+        const { count: value } = alreadyCounted
+          ? await getSiteVisitCount()
+          : await registerSiteVisit();
+        window.sessionStorage.setItem(SESSION_KEY, "1");
+        if (!cancelled && Number.isFinite(value)) setCount(value);
+      } catch {
+        // Counter is decorative; stay silent on failure.
       }
-      window.sessionStorage.setItem(SESSION_KEY, "1");
-      const value = Number(data);
-      if (!cancelled && Number.isFinite(value)) setCount(value);
     };
 
 
