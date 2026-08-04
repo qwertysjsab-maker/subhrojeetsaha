@@ -2,24 +2,33 @@ import { IMPACT, PROFILE } from "@/lib/profile";
 
 export function ImpactSection() {
   return (
-    <section className="bg-slate-50 py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
-          Professional Profile
-        </h2>
+    <section id="profile" className="border-b border-border px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-brand">Professional Profile</p>
+          </div>
+          <div>
+            <p className="font-serif text-2xl leading-snug text-foreground text-pretty md:text-3xl">
+              {PROFILE.tagline}
+            </p>
+            <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
+              {PROFILE.summary}
+            </p>
+          </div>
+        </div>
 
-        <p className="mb-12 max-w-3xl text-lg leading-relaxed text-slate-600">{PROFILE.summary}</p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <dl className="mt-20 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
           {IMPACT.map((item) => (
-            <div
-              key={item.metric}
-              className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="mb-4 text-4xl font-bold text-brand">{item.metric}</div>
-              <p className="leading-relaxed text-slate-600">{item.body}</p>
+            <div key={item.metric} className="bg-card p-8">
+              <dt className="text-xs uppercase tracking-[0.18em] text-brand">{item.label}</dt>
+              <dd className="mt-4 font-serif text-5xl font-medium tracking-tight text-foreground">
+                {item.metric}
+              </dd>
+              <dd className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.body}</dd>
             </div>
           ))}
-        </div>
+        </dl>
       </div>
     </section>
   );

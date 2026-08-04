@@ -17,7 +17,7 @@ const ChatSection = lazy(() =>
 
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =
-  "Technology risk and compliance leader with seven years at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Review my record or submit an enquiry.";
+  "Technology risk and compliance leader with seven years at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Governance, risk and compliance programmes engineered to withstand regulatory, audit and board-level scrutiny.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,12 +47,14 @@ function Index() {
         </ClientOnly>
         <ContactSection />
       </main>
-      <footer className="border-t border-slate-100 px-6 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 font-mono text-xs text-slate-400 sm:flex-row sm:items-center">
-          <span>© {new Date().getFullYear()} Subhrojeet Saha</span>
+      <footer className="bg-ink px-6 py-10 text-ink-foreground">
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 text-xs tracking-wide text-ink-muted sm:flex-row sm:items-center">
+          <span className="font-serif text-sm text-ink-foreground/85">
+            © {new Date().getFullYear()} Subhrojeet Saha
+          </span>
           <span className="flex items-center gap-3">
             <span>Bengaluru, India</span>
-            <span aria-hidden className="hidden text-slate-200 sm:inline">
+            <span aria-hidden className="hidden text-ink-foreground/20 sm:inline">
               ·
             </span>
             <VisitorCount />

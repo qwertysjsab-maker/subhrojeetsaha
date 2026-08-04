@@ -48,13 +48,17 @@ export function ChatSection() {
   };
 
   return (
-    <section id="ai-chat" className="overflow-hidden bg-slate-950 px-6 py-24 text-white">
+    <section id="ai-chat" className="overflow-hidden bg-ink px-6 py-24 text-ink-foreground">
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
         <div>
-          <h2 className="mb-6 font-mono text-4xl font-bold tracking-tight text-brand">
-            Enquire directly
+          <div className="mb-6 flex items-center gap-4">
+            <span className="h-px w-10 bg-brand-soft" aria-hidden />
+            <p className="text-xs uppercase tracking-[0.24em] text-brand-soft">Enquire Directly</p>
+          </div>
+          <h2 className="mb-6 font-serif text-3xl font-medium tracking-tight md:text-4xl">
+            Examine the record in conversation.
           </h2>
-          <p className="mb-8 text-lg leading-relaxed text-slate-400">
+          <p className="mb-8 leading-relaxed text-ink-muted">
             This assistant responds to questions regarding Subhrojeet&apos;s methodology, the
             programmes he has led, the frameworks he has implemented and the suitability of his
             background for a given mandate. Every response is drawn from his professional record.
@@ -67,7 +71,7 @@ export function ChatSection() {
                 type="button"
                 onClick={() => send(prompt)}
                 disabled={busy}
-                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-left font-mono text-xs text-slate-300 transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-50"
+                className="border border-ink-foreground/15 bg-ink-foreground/5 px-4 py-2 text-left text-xs text-ink-muted transition-colors hover:border-brand-soft/50 hover:text-brand-soft disabled:opacity-50"
               >
                 &quot;{prompt}&quot;
               </button>
@@ -75,11 +79,11 @@ export function ChatSection() {
           </div>
         </div>
 
-        <div className="flex h-[520px] flex-col rounded-2xl border border-white/10 bg-slate-900 p-4 sm:p-6">
+        <div className="flex h-[520px] flex-col border border-ink-foreground/15 bg-ink-foreground/5 p-4 sm:p-6">
           <Conversation className="flex-1">
             <ConversationContent className="gap-5 px-0">
               {messages.length === 0 && (
-                <div className="max-w-[85%] rounded-xl rounded-bl-none bg-white/5 p-4 text-sm text-slate-300">
+                <div className="max-w-[85%] rounded-none border-l-2 border-brand-soft bg-ink-foreground/5 p-4 text-sm text-ink-muted">
                   Good day. I can provide detail on Subhrojeet&apos;s work in technology risk,
                   third-party risk, audit and security governance. How may I assist?
                 </div>
@@ -96,8 +100,8 @@ export function ChatSection() {
                     <MessageContent
                       className={
                         message.role === "user"
-                          ? "group-[.is-user]:bg-brand group-[.is-user]:text-brand-foreground"
-                          : "group-[.is-assistant]:text-white [&_*]:text-white"
+                          ? "group-[.is-user]:rounded-none group-[.is-user]:bg-brand-soft group-[.is-user]:text-ink"
+                          : "group-[.is-assistant]:text-ink-foreground [&_*]:text-ink-foreground"
                       }
                     >
                       <MessageResponse>{text}</MessageResponse>
@@ -107,7 +111,7 @@ export function ChatSection() {
               })}
 
               {status === "submitted" && (
-                <Shimmer className="text-sm text-slate-400">Thinking...</Shimmer>
+                <Shimmer className="text-sm text-ink-muted">Thinking...</Shimmer>
               )}
 
               {error && (
@@ -121,7 +125,7 @@ export function ChatSection() {
           </Conversation>
 
           <PromptInput
-            className="mt-4 border-white/15 bg-white/5"
+            className="mt-4 rounded-none border-ink-foreground/20 bg-ink-foreground/5"
             onSubmit={(_message, event) => {
               event.preventDefault();
               send(input);
@@ -135,9 +139,9 @@ export function ChatSection() {
                 hasInteracted.current = true;
               }}
               placeholder="Submit an enquiry about his experience..."
-              className="text-slate-100 placeholder:text-slate-500"
+              className="text-ink-foreground placeholder:text-ink-muted/60"
             />
-            <PromptInputFooter className="justify-end border-white/10">
+            <PromptInputFooter className="justify-end border-ink-foreground/10">
               <PromptInputSubmit status={status} disabled={!input.trim() && !busy} />
             </PromptInputFooter>
           </PromptInput>

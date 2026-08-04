@@ -33,7 +33,7 @@ export function VisitorCount() {
   if (count === null) return null;
 
   return (
-    <span className="font-mono text-xs tabular-nums text-slate-500 transition-colors hover:text-slate-700">
+    <span className="text-xs tabular-nums text-ink-muted transition-colors hover:text-ink-foreground">
       {count.toLocaleString("en-GB")} visits
     </span>
   );

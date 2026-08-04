@@ -4,23 +4,26 @@ export const PROFILE = {
   location: "Bengaluru, Karnataka, India",
   linkedin: "https://www.linkedin.com/in/subhrojeetsaha/",
   summary:
-    "I am a technology risk and compliance practitioner with more than seven years of experience gained at Goldman Sachs, JPMorgan Chase, Moody's, Diligent and KPMG. My work spans regulatory compliance, enterprise and technology risk management, third-party risk, information security governance, internal audit and control assurance — consistently delivered in highly regulated, globally distributed environments.",
+    "Subhrojeet Saha is a technology risk and compliance leader with more than seven years of experience at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. His mandate spans regulatory compliance, enterprise and technology risk, third-party risk, information security governance, internal audit and control assurance — delivered consistently within highly regulated, globally distributed institutions. He currently directs frontier-AI vulnerability management at JPMorgan Chase, where he serves as the security governance, risk and compliance authority to engineering, cybersecurity and technology risk stakeholders.",
   tagline:
-    "I design and lead governance, risk and compliance programmes that hold up to regulatory, audit and board-level scrutiny.",
+    "Governance, risk and compliance programmes engineered to withstand regulatory, audit and board-level scrutiny.",
 };
 
 export const IMPACT = [
   {
     metric: "250+",
-    body: "Risk-based vendor assessments governed each year without a single service-level breach, complemented by more than fifty critical supplier reviews for a global SaaS enterprise.",
+    label: "Vendor assessments governed annually",
+    body: "Risk-based vendor assessments overseen each year without a single service-level breach, alongside more than fifty critical supplier reviews for a global SaaS enterprise.",
   },
   {
     metric: "~30%",
-    body: "Improvement in operating efficiency achieved by redesigning the third-party risk management framework and operating model in alignment with SOC 2 and BSI C5 requirements.",
+    label: "Gain in operating efficiency",
+    body: "Achieved by redesigning the third-party risk management framework and operating model in alignment with SOC 2 and BSI C5 requirements.",
   },
   {
-    metric: "Priority 0",
-    body: "Programme accountability for frontier-AI vulnerability management at a global financial institution, together with the establishment of a second-line controls surveillance capability that measurably reduced audit findings.",
+    metric: "P0",
+    label: "Frontier-AI risk mandate",
+    body: "Programme accountability for frontier-AI vulnerability management at a global financial institution, and a second-line controls surveillance capability that measurably reduced audit findings.",
   },
 ];
 
