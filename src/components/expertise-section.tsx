@@ -1,10 +1,4 @@
-import {
-  CERTIFICATIONS,
-  COMPETENCIES,
-  EDUCATION,
-  FRAMEWORKS,
-  TOOLS,
-} from "@/lib/profile";
+import { CERTIFICATIONS, COMPETENCIES, EDUCATION, FRAMEWORKS, TOOLS } from "@/lib/profile";
 
 export function ExpertiseSection() {
   return (
@@ -12,12 +6,10 @@ export function ExpertiseSection() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
           <div className="md:w-1/3">
-            <h2 className="mb-4 text-4xl font-bold">
-              Expertise &amp; Credentials
-            </h2>
+            <h2 className="mb-4 text-4xl font-bold">Expertise &amp; Credentials</h2>
             <p className="text-slate-500">
-              The frameworks, tooling and disciplines underpinning seven years
-              of risk and assurance work in regulated environments.
+              The frameworks, tooling and disciplines underpinning seven years of risk and assurance
+              work in regulated environments.
             </p>
 
             <div className="mt-8 border-t border-slate-100 pt-6">

@@ -11,8 +11,7 @@ import {
 
 function resumeText() {
   const roles = EXPERIENCE.map(
-    (r) =>
-      `${r.company} — ${r.role} (${r.period})\n${r.bullets.map((b) => `  - ${b}`).join("\n")}`,
+    (r) => `${r.company} — ${r.role} (${r.period})\n${r.bullets.map((b) => `  - ${b}`).join("\n")}`,
   ).join("\n\n");
 
   return [

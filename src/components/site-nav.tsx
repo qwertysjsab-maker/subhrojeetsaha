@@ -7,7 +7,6 @@ const LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
-
 export function SiteNav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
@@ -20,11 +19,7 @@ export function SiteNav() {
         </a>
         <div className="hidden gap-8 text-sm font-medium uppercase tracking-widest text-slate-500 md:flex">
           {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition-colors hover:text-brand"
-            >
+            <a key={link.href} href={link.href} className="transition-colors hover:text-brand">
               {link.label}
             </a>
           ))}

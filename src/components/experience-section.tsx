@@ -10,10 +10,7 @@ export function ExperienceSection() {
 
         <div className="space-y-16">
           {EXPERIENCE.map((role) => (
-            <div
-              key={role.company}
-              className="relative border-l-2 border-slate-100 pl-8 md:pl-12"
-            >
+            <div key={role.company} className="relative border-l-2 border-slate-100 pl-8 md:pl-12">
               <div
                 className={`absolute -left-[9px] top-1 h-4 w-4 rounded-full ring-4 ring-white ${
                   role.current ? "bg-brand" : "bg-slate-200"

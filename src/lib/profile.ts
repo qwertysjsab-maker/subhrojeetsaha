@@ -98,16 +98,7 @@ export const FRAMEWORKS = [
   "DORA",
 ];
 
-export const TOOLS = [
-  "Power BI",
-  "Alteryx",
-  "SQL",
-  "Python",
-  "Jira",
-  "Confluence",
-  "AWS",
-  "Azure",
-];
+export const TOOLS = ["Power BI", "Alteryx", "SQL", "Python", "Jira", "Confluence", "AWS", "Azure"];
 
 export const COMPETENCIES = [
   "Programme Management",

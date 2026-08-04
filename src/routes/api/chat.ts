@@ -64,7 +64,6 @@ export const Route = createFileRoute("/api/chat")({
           return new Response("AI is not configured", { status: 500 });
         }
 
-
         const gateway = createLovableAiGatewayProvider(key);
 
         const result = streamText({

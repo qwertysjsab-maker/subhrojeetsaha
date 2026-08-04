@@ -1,7 +1,8 @@
 # Portfolio Website
 
 I will share my resume - can you create :
-- a website for me with a beautiful professional landing page and host it 
+
+- a website for me with a beautiful professional landing page and host it
 - a chatbot that can converse with people and basically sell them my experience and skills
 
 This project was built with [Lovable](https://lovable.dev).

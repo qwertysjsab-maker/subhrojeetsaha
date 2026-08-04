@@ -15,11 +15,9 @@ const ChatSection = lazy(() =>
   import("@/components/chat-section").then((m) => ({ default: m.ChatSection })),
 );
 
-
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =
   "Technology risk and compliance leader with seven years at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Review my record or submit an enquiry.";
-
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +59,6 @@ function Index() {
           </span>
         </div>
       </footer>
-
     </div>
   );
 }
