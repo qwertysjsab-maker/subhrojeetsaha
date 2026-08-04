@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  getSiteVisitCount,
-  registerSiteVisit,
-} from "@/lib/visits.functions";
+import { getSiteVisitCount, registerSiteVisit } from "@/lib/visits.functions";
 
 const SESSION_KEY = "sjs-visit-counted";
 
@@ -14,8 +11,7 @@ export function VisitorCount() {
     let cancelled = false;
 
     const run = async () => {
-      const alreadyCounted =
-        window.sessionStorage.getItem(SESSION_KEY) === "1";
+      const alreadyCounted = window.sessionStorage.getItem(SESSION_KEY) === "1";
 
       try {
         const { count: value } = alreadyCounted
@@ -27,7 +23,6 @@ export function VisitorCount() {
         // Counter is decorative; stay silent on failure.
       }
     };
-
 
     void run();
     return () => {

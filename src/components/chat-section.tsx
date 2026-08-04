@@ -7,11 +7,7 @@ import {
   ConversationContent,
   ConversationScrollButton,
 } from "@/components/ai-elements/conversation";
-import {
-  Message,
-  MessageContent,
-  MessageResponse,
-} from "@/components/ai-elements/message";
+import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import {
   PromptInput,
   PromptInputFooter,
@@ -26,7 +22,6 @@ const STARTERS = [
   "What is his current remit at JPMorgan Chase?",
   "Which regulatory frameworks has he implemented first-hand?",
 ];
-
 
 export function ChatSection() {
   const [input, setInput] = useState("");
@@ -53,20 +48,16 @@ export function ChatSection() {
   };
 
   return (
-    <section
-      id="ai-chat"
-      className="overflow-hidden bg-slate-950 px-6 py-24 text-white"
-    >
+    <section id="ai-chat" className="overflow-hidden bg-slate-950 px-6 py-24 text-white">
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
         <div>
           <h2 className="mb-6 font-mono text-4xl font-bold tracking-tight text-brand">
             Enquire directly
           </h2>
           <p className="mb-8 text-lg leading-relaxed text-slate-400">
-            This assistant responds to questions regarding Subhrojeet&apos;s
-            methodology, the programmes he has led, the frameworks he has
-            implemented and the suitability of his background for a given
-            mandate. Every response is drawn from his professional record.
+            This assistant responds to questions regarding Subhrojeet&apos;s methodology, the
+            programmes he has led, the frameworks he has implemented and the suitability of his
+            background for a given mandate. Every response is drawn from his professional record.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -89,12 +80,10 @@ export function ChatSection() {
             <ConversationContent className="gap-5 px-0">
               {messages.length === 0 && (
                 <div className="max-w-[85%] rounded-xl rounded-bl-none bg-white/5 p-4 text-sm text-slate-300">
-                  Good day. I can provide detail on Subhrojeet&apos;s work in
-                  technology risk, third-party risk, audit and security
-                  governance. How may I assist?
+                  Good day. I can provide detail on Subhrojeet&apos;s work in technology risk,
+                  third-party risk, audit and security governance. How may I assist?
                 </div>
               )}
-
 
               {messages.map((message) => {
                 const text = message.parts
@@ -118,18 +107,15 @@ export function ChatSection() {
               })}
 
               {status === "submitted" && (
-                <Shimmer className="text-sm text-slate-400">
-                  Thinking...
-                </Shimmer>
+                <Shimmer className="text-sm text-slate-400">Thinking...</Shimmer>
               )}
 
               {error && (
                 <p className="text-sm text-red-400">
-                  The assistant is temporarily unavailable. Please try again
-                  shortly, or use the contact form below.
+                  The assistant is temporarily unavailable. Please try again shortly, or use the
+                  contact form below.
                 </p>
               )}
-
             </ConversationContent>
             <ConversationScrollButton />
           </Conversation>
@@ -152,10 +138,7 @@ export function ChatSection() {
               className="text-slate-100 placeholder:text-slate-500"
             />
             <PromptInputFooter className="justify-end border-white/10">
-              <PromptInputSubmit
-                status={status}
-                disabled={!input.trim() && !busy}
-              />
+              <PromptInputSubmit status={status} disabled={!input.trim() && !busy} />
             </PromptInputFooter>
           </PromptInput>
         </div>
@@ -163,4 +146,3 @@ export function ChatSection() {
     </section>
   );
 }
-

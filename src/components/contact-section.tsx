@@ -41,10 +41,9 @@ export function ContactSection() {
         <div>
           <h2 className="mb-6 text-4xl font-bold">Get in touch.</h2>
           <p className="mb-8 max-w-md leading-relaxed text-slate-600">
-            I welcome enquiries regarding senior appointments and advisory
-            engagements in technology risk, compliance, third-party risk and
-            security governance. Correspondence submitted below reaches me
-            directly and is treated in confidence.
+            I welcome enquiries regarding senior appointments and advisory engagements in technology
+            risk, compliance, third-party risk and security governance. Correspondence submitted
+            below reaches me directly and is treated in confidence.
           </p>
 
           <a
