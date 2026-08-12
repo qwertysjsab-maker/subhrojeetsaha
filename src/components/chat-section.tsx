@@ -134,6 +134,7 @@ export function ChatSection() {
               onFocus={() => {
                 hasInteracted.current = true;
               }}
+              aria-label="Ask a question about Subhrojeet's experience"
               placeholder="Submit an enquiry about his experience..."
               className="text-slate-100 placeholder:text-slate-500"
             />

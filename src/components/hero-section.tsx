@@ -11,6 +11,9 @@ export function HeroSection() {
         </p>
         <h1 className="mb-8 text-6xl font-bold leading-[0.9] tracking-tight md:text-8xl">
           Subhrojeet Saha.
+          <span className="mt-3 block font-mono text-sm font-medium uppercase tracking-[0.25em] text-slate-400 md:text-base">
+            Technology Risk &amp; Compliance
+          </span>
         </h1>
         <div className="grid items-end gap-12 md:grid-cols-2">
           <p className="text-2xl font-light leading-tight text-slate-600 md:text-3xl">
