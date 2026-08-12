@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/hero-section";
 import { ImpactSection } from "@/components/impact-section";
 import { SiteNav } from "@/components/site-nav";
 import { VisitorCount } from "@/components/visitor-count";
+import { CERTIFICATIONS, COMPETENCIES, EXPERIENCE, FRAMEWORKS, PROFILE } from "@/lib/profile";
 
 // Loaded only in the browser, in its own async chunk, to keep the AI SDK's
 // zod dependency out of the route's initial module graph.
@@ -18,6 +19,38 @@ const ChatSection = lazy(() =>
 const TITLE = "Subhrojeet Saha | Technology Risk & Compliance";
 const DESCRIPTION =
   "Technology risk and compliance leader with seven years at JPMorgan Chase, Diligent, Moody's, Goldman Sachs and KPMG. Review my record or submit an enquiry.";
+const SITE_URL = "https://subhrojeetsaha.lovable.app";
+
+const PERSON_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: PROFILE.name,
+  jobTitle: `${PROFILE.title} Leader`,
+  description: PROFILE.summary,
+  url: SITE_URL,
+  sameAs: [PROFILE.linkedin],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    addressCountry: "India",
+  },
+  knowsAbout: [...COMPETENCIES, ...FRAMEWORKS, "Governance, Risk and Compliance", "Cybersecurity"],
+  hasCredential: CERTIFICATIONS.map((cert) => ({
+    "@type": "EducationalOccupationalCredential",
+    name: cert,
+  })),
+  worksFor: EXPERIENCE.map((role) => ({
+    "@type": "Organization",
+    name: role.company,
+    employee: {
+      "@type": "EmployeeRole",
+      roleName: role.role,
+      startDate: role.period.split(" — ")[0],
+      endDate: role.period.split(" — ")[1] === "Present" ? undefined : role.period.split(" — ")[1],
+    },
+  })),
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,6 +59,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(PERSON_SCHEMA),
+      },
     ],
   }),
   component: Index,
