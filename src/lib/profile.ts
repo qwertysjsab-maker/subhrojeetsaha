@@ -27,7 +27,7 @@ export const IMPACT = [
 export const EXPERIENCE = [
   {
     company: "JPMorgan Chase & Co",
-    role: "Technical Program Manager III",
+    role: "Architect III",
     period: "Mar 2026 — Present",
     current: true,
     bullets: [
