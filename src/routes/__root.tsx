@@ -104,6 +104,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Subhrojeet Saha | Technology Risk & Compliance",
+          url: "https://subhrojeetsaha.lovable.app",
+          description:
+            "Professional profile of Subhrojeet Saha, a technology risk and compliance leader with seven years at JPMorgan Chase, Goldman Sachs, Moody's, Diligent and KPMG.",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
