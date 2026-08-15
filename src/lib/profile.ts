@@ -32,8 +32,9 @@ export const EXPERIENCE = [
     current: true,
     bullets: [
       "Provide technical programme management for Project Glasswing (Anthropic and JPMorgan Chase), overseeing the identification, triage and resolution of vulnerabilities surfaced by Mythos and other frontier AI models across a major line of business.",
-      "Serve as the security governance, risk and compliance subject matter expert to business, engineering, cybersecurity and technology risk stakeholders.",
+      "Serve as the security governance, risk and compliance subject matter expert to business, engineering, cybersecurity and technology risk stakeholders, establishing key metrics and driving programme momentum.",
       "Automated metric computation and business intelligence reporting to present live key performance indicators, including vulnerability burndown since inception, to C-suite leadership.",
+      "Identify opportunities for intelligent automation and process optimisation to reduce manual effort and improve risk management and reporting activities.",
       "Streamlined application onboarding by aligning delivery workflows with technology and security control requirements across the software development lifecycle.",
       "Monitor security reliability metrics and risk indicators, reporting control health and remediation progress to executive stakeholders.",
     ],
@@ -46,6 +47,7 @@ export const EXPERIENCE = [
       "Led the security risk and third-party risk management functions for a global SaaS enterprise, directing a team of five risk professionals.",
       "Established a second-line controls surveillance capability to identify control deficiencies proactively and strengthen assurance coverage.",
       "Redesigned third-party risk policies, standards and controls in alignment with SOC 2 and BSI C5, improving operating efficiency by approximately thirty per cent.",
+      "Conducted enterprise-wide technology and operational risk assessments, advising engineering and business leaders on risk treatment strategies.",
       "Governed more than 250 risk-based vendor assessments annually and over fifty critical supplier reviews, maintaining audit and IPO readiness throughout.",
       "Delivered executive risk reporting, compliance communications and enterprise security awareness programmes.",
     ],
@@ -59,6 +61,7 @@ export const EXPERIENCE = [
       "Conducted continuous risk monitoring to identify emerging operational, compliance and information security exposures.",
       "Advised senior stakeholders on control deficiencies, remediation priorities and risk treatment strategies.",
       "Maintained enterprise risk registers and coordinated remediation across multiple business functions.",
+      "Partnered with auditors, consultants and business leadership on governance, compliance and audit initiatives.",
     ],
   },
   {
@@ -66,9 +69,10 @@ export const EXPERIENCE = [
     role: "Senior Analyst",
     period: "Jul 2021 — Apr 2022",
     bullets: [
-      "Assessed technology controls and risk management practices supporting Global Markets Engineering and Operations.",
+      "Assessed technology controls and risk management practices supporting Global Markets — Equities, FICC and Operations Engineering and Business Operations.",
       "Evaluated control effectiveness across business-critical applications, infrastructure and processes.",
-      "Performed application and source code reviews across Python, Java, SQL and C++ environments.",
+      "Performed application and source code reviews across Python, Java, SQL and C++ environments to ensure code matched business logic and control criteria.",
+      "Partnered with Engineering, Operations and Risk stakeholders to evaluate risk exposure and support mitigation activities.",
       "Validated remediation activity and monitored the closure of technology risk findings.",
     ],
   },
@@ -80,6 +84,7 @@ export const EXPERIENCE = [
       "Delivered SOC 1, SOC 2, ISAE 3402 and ISAE 3000 assurance engagements across the technology, telecommunications and media sectors.",
       "Performed risk assessments, compliance reviews and control testing of technology and information security controls.",
       "Developed risk control matrices aligned to prevailing regulatory and industry frameworks.",
+      "Supported audit planning, stakeholder engagement and delivery of assurance programmes.",
     ],
   },
 ];
@@ -96,12 +101,14 @@ export const FRAMEWORKS = [
   "ISO 27001",
   "ISO 42001",
   "DORA",
+  "CMMC",
 ];
 
 export const TOOLS = ["Power BI", "Alteryx", "SQL", "Python", "Jira", "Confluence", "AWS", "Azure"];
 
 export const COMPETENCIES = [
   "Programme Management",
+  "Compliance",
   "Regulatory Compliance",
   "Enterprise Risk Management",
   "Technology Risk",
